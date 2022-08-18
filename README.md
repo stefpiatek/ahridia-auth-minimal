@@ -21,7 +21,7 @@ Setup a local version: clone the repository and install the npm dependencies
 
 ```shell
 git clone https://github.com/stefpiatek/ahridia-auth-minimal.git
-cd ahridia-auth-minimal.git
+cd ahridia-auth-minimal
 npm install
 ```
 
