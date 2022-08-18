@@ -1,7 +1,8 @@
-import React, { FC, useState, useEffect } from "react";
-import { createContext } from "react";
-import { oauth2 as SMART } from "fhirclient";
+import React, {FC, useState, useEffect} from "react";
+import {createContext} from "react";
+import {oauth2 as SMART} from "fhirclient";
 import Client from "fhirclient/lib/Client";
+import {NavLink} from "react-router-dom";
 
 type clientContext = {
   client: Client | null;
@@ -34,10 +35,14 @@ export const FhirProvider: FC<Props> = (props) => {
 
   if (error) {
     console.error(error.stack);
-    return <pre>{error.message}</pre>;
+    return (
+      <>
+        <pre>This page should only be accessed using the Home page, please click the links from there</pre>
+        <NavLink to={"/"}>Home page</NavLink>
+      </>)
   }
 
-  return <FhirContext.Provider value={{ client: client, setClient: setClient }}>{props.children}</FhirContext.Provider>;
+  return <FhirContext.Provider value={{client: client, setClient: setClient}}>{props.children}</FhirContext.Provider>;
 };
 
 export const FhirContext = createContext(context);
