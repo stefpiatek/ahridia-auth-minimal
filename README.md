@@ -2,7 +2,7 @@
 
 ## Dependencies 
 
-The project is built using React and requires an up-to-date version of node and npm to be installed.
+The project is built using React and requires an up-to-date version of [node and npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) to be installed.
 These can be checked on the command line on unix systems:
 
 ```shell
